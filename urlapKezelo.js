@@ -1,3 +1,4 @@
+import { postAdat } from "./async.js";
 import { init } from "./main.js";
 export function adatokListaba(lista) {
   /* összegyűjti az űrlapról az adatokat */
@@ -31,8 +32,8 @@ export function adatokListaba(lista) {
       validELEMEK.eq(0).css("display") === "block" &&
       validELEMEK.eq(1).css("display") === "block"
     ) {
-      lista.push(adat);
-      init(lista);
+      postAdat("http://localhost:3000/emberekLISTA", adat);
+      //init(lista);
     }
   });
 }
