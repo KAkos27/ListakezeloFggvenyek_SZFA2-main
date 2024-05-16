@@ -26,13 +26,13 @@ let nevIrany = 1;
 init(emberekLISTA);
 nevSzuresEsemeny();
 
-adatokListaba(emberekLISTA)
+adatokListaba(emberekLISTA);
 
 export function init(lista) {
   let txt = tablazatOsszeallit(lista);
   megjelenites(txt);
   nevRendezEsemeny(lista);
-  sorTorlesEsemeny()
+  sorTorlesEsemeny();
 }
 
 function nevRendezEsemeny(lista) {
@@ -64,8 +64,8 @@ function sorTorlesEsemeny() {
   const kukaELEM = $(".kuka");
   kukaELEM.on("click", function (event) {
     let index = event.target.id; /*  az aktuális kuka indexe */
-    const LISTA = sorTorles(emberekLISTA,index);
-    console.log(LISTA)
+    const LISTA = sorTorles(emberekLISTA, index);
+    console.log(LISTA);
     init(LISTA);
   });
 }

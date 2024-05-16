@@ -1,7 +1,7 @@
 export function tablazatRendez(lista, irany) {
   console.log(irany);
   /* - adott mező (név) szerint rendezi a táblázatot. - akkor hívódik meg, ha a táblázat név fejlécmezőjére kattintunk. Berendezzük a listát */
- 
+
   lista.sort(function (a, b) {
     /* szorgalmi: a.nev első betűjének karakterkódja alapján */
     /*    if (a.nev > b.nev) {
@@ -9,11 +9,10 @@ export function tablazatRendez(lista, irany) {
     } else {
       return -1;
     } */
-    
+
     return a.nev.toUpperCase() > b.nev.toUpperCase()
       ? 1 * irany
       : -1 * irany; /*  pozitív, vagy negatív érték kell */
-      
   });
 
   return lista;
@@ -21,7 +20,7 @@ export function tablazatRendez(lista, irany) {
 export function tablazatRendezSzamSzerint(lista, irany) {
   console.log(irany);
   /* - adott mező (név) szerint rendezi a táblázatot. - akkor hívódik meg, ha a táblázat név fejlécmezőjére kattintunk. Berendezzük a listát */
- 
+
   lista.sort(function (a, b) {
     /* szorgalmi: a.nev első betűjének karakterkódja alapján */
     /*    if (a.nev > b.nev) {
@@ -29,10 +28,8 @@ export function tablazatRendezSzamSzerint(lista, irany) {
     } else {
       return -1;
     } */
-    
-    return a.kor - b.kor
-    
-      
+
+    return a.kor - b.kor;
   });
 
   return lista;

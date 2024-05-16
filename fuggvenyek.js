@@ -4,11 +4,11 @@ export function tablazatOsszeallit(lista) {
   txt += "<table class='table table-striped'>";
   txt += "<tr><th>Név</th><th>Kor</th><th>Nem</th><th></th></tr>";
   /*  szorgalmi: a fejléc kulcsait is ciklussal írd ki! */
-  lista.forEach((element,i) => {
+  lista.forEach((element, i) => {
     txt += `<tr>`;
     for (const key in element) {
       /* objektumokon iterál végig */
-      
+
       txt += `<td>${element[key]}</td>`;
     }
 
